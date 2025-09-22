@@ -39,7 +39,7 @@ private fun getTemplate(name: String): Template<out Any> = when (name) {
     else -> throw UnknownTemplateException("Can't find template with name $name")
 }
 
-fun String.fullTrim(): String =
+private fun String.fullTrim(): String =
     this.replace(Regex("\\s+"), "")
 
 /**
