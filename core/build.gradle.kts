@@ -7,10 +7,7 @@ kotlin {
     js {
         browser {
             testTask {
-                useKarma {
-                    useChromiumHeadless()
-                    // useFirefoxHeadless()
-                }
+                useKarma()
             }
         }
         //generateTypeScriptDefinitions()
