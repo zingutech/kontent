@@ -1,0 +1,43 @@
+[versions]
+composeHotReload = "1.0.0-beta08"
+composeMultiplatform = "1.9.0"
+kotlin = "2.2.20"
+ktor = "3.3.0"
+
+[libraries]
+kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version = "1.7.3" }
+kotlinx-serialization = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version = "1.9.0" }
+kotlinx-datetime = { module = "org.jetbrains.kotlinx:kotlinx-datetime", version = "0.7.1" }
+kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
+kotlinx-html = { module = "org.jetbrains.kotlinx:kotlinx-html", version = "0.12.0" }
+kotlinx-io = { module = "org.jetbrains.kotlinx:kotlinx-io-core", version = "0.8.0" }
+
+# Ktor
+ktor-server-core = { module = "io.ktor:ktor-server-core", version.ref = "ktor" }
+ktor-server-cio = { module = "io.ktor:ktor-server-cio", version.ref = "ktor" }
+ktor-server-content-negotiation = { module = "io.ktor:ktor-server-content-negotiation", version.ref = "ktor" }
+ktor-serialization-kotlinx-json = { module = "io.ktor:ktor-serialization-kotlinx-json", version.ref = "ktor" }
+ktor-client-js = { module = "io.ktor:ktor-client-js", version.ref = "ktor" }
+
+# js-joda
+js-joda = { group = "js-joda", name = "timezone", version = "2.3.0" }
+
+# tailwind
+tailwindcss-core = { group = "npm", name = "tailwindcss", version = "3.4.3" }
+tailwindcss-forms = { group = "tailwindcss", name = "forms", version = "0.5.7" }
+tailwindcss-typography = { group = "tailwindcss", name = "typography", version = "0.5.12" }
+
+# webpack
+postcss-core = { group = "npm", name = "postcss", version = "8.4.38" }
+postcss-loader = { group = "npm", name = "postcss-loader", version = "8.1.1" }
+autoprefixer = { group = "npm", name = "autoprefixer", version = "10.4.19" }
+css-loader = { group = "npm", name = "css-loader", version = "6.10.0" }
+style-loader = { group = "npm", name = "style-loader", version = "3.3.4" }
+cssnano = { group = "npm", name = "cssnano", version = "6.1.2" }
+
+[plugins]
+kotlinMultiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
+kotlinSerialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+composeHotReload = { id = "org.jetbrains.compose.hot-reload", version.ref = "composeHotReload" }
+composeMultiplatform = { id = "org.jetbrains.compose", version.ref = "composeMultiplatform" }
+composeCompiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
